@@ -27,9 +27,9 @@
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     z-index: 10;
+    padding: 2em 0;
     margin: 0 2em;
     max-width: 700px;
-    padding: 60px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,6 +50,7 @@ input {
     padding: .7rem;
     user-select: none;
     max-height: 50px;
+    min-width: 80%;
     border-bottom: 3px solid rgb(255, 255, 255);
     color: white;
     font-size: 22px;
@@ -67,6 +68,8 @@ input::placeholder {
     font-size: 1.4rem;
     cursor: pointer;
     font-weight: bolder;
+    margin: .7rem;
+
 }
 .copy-btn:hover{
     color: #ffc069;
@@ -196,7 +199,7 @@ input::placeholder {
 }
 
 .successValidation{
-    color: #baffb5;
+    color: #ffffff;
     font-size: 1.2rem;
     position: fixed;
     bottom: 1rem;
