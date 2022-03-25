@@ -1,12 +1,5 @@
-// Start your code ***HERE*** =========
 
-// create an array with all possible character types: Uppercase, Lowercase, numbers, and symbols stored in a variable
-
-// create a global variable called "pwLength" with a number between 10 and 18
-
-// Using the above array and password length variable, create a random password using a for loop inside of a function called "addNewPassword" either saved as an arrow function variable or a traditional function
-
-// ========= ⬇ DO NOT TOUCH THIS CODE ⬇ ======
+// ========= ⬇ Password Generator scripts⬇ ======
 
 let genBtn = document.getElementById("btnGen");
 
@@ -19,10 +12,6 @@ let buttonHandler = () => {
 };
 // Event listener for generate PW button
 genBtn.addEventListener("click", buttonHandler);
-
-// ========= ⬆ DO NOT TOUCH THIS CODE ⬆ ======
-
-
 
 
 //getting the number from user input
@@ -65,3 +54,16 @@ function closeModal(){
     document.querySelector(".modal").classList.add("hide");
 }
 closeModalBtn.addEventListener("click", closeModal)
+
+//copy password to clipboard
+
+const copyBtn = document.querySelector(".copy-btn");
+const copyToClipboard = ()=>{
+    /* Copy the text inside the text field */
+     navigator.clipboard.writeText(document.getElementById("password").value);
+    document.querySelector(".successValidation").innerHTML = "copied to clipboard";
+    setInterval(() => {
+     document.querySelector(".successValidation").innerHTML = "";
+    }, 2000); 
+}
+copyBtn.addEventListener("click", copyToClipboard)
